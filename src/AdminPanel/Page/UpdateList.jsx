@@ -17,7 +17,7 @@ export default function UpdateList(){
 
     let getdata=async()=>{
             try{
-            let result=await axios.get(`http://localhost:8080/list/list/${id}`);
+            let result=await axios.get(`https://furniturebackend-8z3r.onrender.com/list/list/${id}`);
                setTitle(result.data.data.title);
                setDiscription(result.data.data.discription);
                setImg(result.data.data.img.url);

@@ -7,6 +7,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import img from "/src/assets/Chair.avif"
 
 
 
@@ -57,7 +58,7 @@ export default function Login(){
             </div>
 
             <div className=" ">
-                <img src="src\assets\Chair.avif" alt="img" />
+                <img src={img} alt="img" />
             </div>
             
             </div>

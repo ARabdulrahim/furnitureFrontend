@@ -23,7 +23,7 @@ export default function Createlist(){
         formdata.append('img', img);
         formdata.append('price',price);
         formdata.append('qty',qty);
-        let result=await axios.post("http://localhost:8080/list/new",formdata,{headers: {"Content-Type": "multipart/form-data" ,authorization :`bearer ${JSON.parse(localStorage.getItem("Token"))}`}} );
+        let result=await axios.post("https://furniturebackend-8z3r.onrender.com/list/new",formdata,{headers: {"Content-Type": "multipart/form-data" ,authorization :`bearer ${JSON.parse(localStorage.getItem("Token"))}`}} );
         toast.success(result.data.message,{autoClose:1500})
         // (result.data.data.owner);
         Navigate("/showlist");

@@ -11,7 +11,7 @@ function ShowList() {
   console.log(id);
   let fetchList=async()=>{
     try{
-   let result=await axios.get("http://localhost:8080/list");
+   let result=await axios.get("https://furniturebackend-8z3r.onrender.com/list");
    setData(result.data.data);
     }catch(err){
       console.log("error :", err);
@@ -21,7 +21,7 @@ function ShowList() {
   //list delete
   let del=async(url)=>{
     try{
-        let result=await axios.delete(`http://localhost:8080/list/id`,{headers:{"Content-Type": "application/json"},data: {url}});
+        let result=await axios.delete(`https://furniturebackend-8z3r.onrender.com/list/id`,{headers:{"Content-Type": "application/json"},data: {url}});
         toast.success(result.data.message,{autoClose:1500});
         Navigate("/showlist");
 

@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import Navebar from "../Navebar";
 import Footer from "../Footer";
-
+import img from "/src/assets/Chair.avif"
 
 
 export default function Signup(){
@@ -74,7 +74,7 @@ export default function Signup(){
             </div>
 
             <div className=" ">
-                <img src="src\assets\Chair.avif" alt="" />
+                <img src={img} alt="" />
             </div>
             
             </div>
