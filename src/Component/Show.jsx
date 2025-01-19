@@ -34,7 +34,7 @@ export default function Show(){
 
     let reivewCreate=async(e)=>{
        try{
-        let result=await axios.post(`http://localhost:8080/list/${id}/review`,{rating, comment},{headers:{"Content-Type":"application/json", authorization:`bearer ${JSON.parse(localStorage.getItem("Token"))}`}});
+        let result=await axios.post(`https://furniturebackend-8z3r.onrender.com/list/${id}/review`,{rating, comment},{headers:{"Content-Type":"application/json", authorization:`bearer ${JSON.parse(localStorage.getItem("Token"))}`}});
         toast.success(result.data.message,{autoClose:1500});
         setComment("");
         setRating("");
@@ -48,7 +48,7 @@ export default function Show(){
     //review delete
     let revDel=async(revid)=>{
         try{
-            let result=await axios.delete(`http://localhost:8080/list/${id}/reviews/${revid}`);
+            let result=await axios.delete(`https://furniturebackend-8z3r.onrender.com/list/${id}/reviews/${revid}`);
             toast.success(result.data.message,{autoClose:1500});
             showUniquedata(id);
            
@@ -60,7 +60,7 @@ export default function Show(){
    //Addtocart
    let AddToCart=async()=>{
     try{
-        let result=await axios.post("http://localhost:8080/addtocart/new",{title: data.title, img: data.img, discription: data.discription,qty:data.qty, price: data.price, prodId:data._id},
+        let result=await axios.post("https://furniturebackend-8z3r.onrender.com/addtocart/new",{title: data.title, img: data.img, discription: data.discription,qty:data.qty, price: data.price, prodId:data._id},
             {headers:{"Content-Type":"application/json", authorization:`bearer ${JSON.parse(localStorage.getItem("Token"))}`}});
             toast.success(result.data.message,{autoClose:1500});
             Navigate("/cart")

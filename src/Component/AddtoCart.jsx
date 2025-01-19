@@ -5,6 +5,7 @@ import Footer from './Footer';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import WithAuth from '../utils/WithAuth';
 
 function AddtoCart() {
   const[data, setData]=useState([]);
@@ -67,4 +68,4 @@ function AddtoCart() {
   )
 }
 
-export default AddtoCart
+export default WithAuth(AddtoCart);

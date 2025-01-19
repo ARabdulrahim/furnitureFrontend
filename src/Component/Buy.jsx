@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navebar from './Navebar'
 import Footer from './Footer'
 import { Link, useParams } from 'react-router-dom';
+import WithAuth from '../utils/WithAuth';
 
 function Buy() {
   const[data, setData]=useState([]);
@@ -81,4 +82,4 @@ console.log(image);
   )
 }
 
-export default Buy
+export default WithAuth(Buy);

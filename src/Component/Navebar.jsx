@@ -18,9 +18,6 @@ export default function Navebar({searchfn}){
     let handleLogout=()=>{
             localStorage.clear();
             navigate("/login");
-            setTimeout(()=>{
-                window.location.reload();
-            },10);
     }
     
     let handleChange=(e)=>{

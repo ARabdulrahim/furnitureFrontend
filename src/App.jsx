@@ -33,8 +33,8 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/user" element={<UserHome/>}/>
       <Route path="/user/profile" element={<UserProfile/>} />
-      <Route path="/cart" element={token ? <AddtoCart/> : <Navigate to="/login"/>}/>
-      <Route path="/buy/:id" element={token ? <Buy/> : <Navigate to="/login"/>}/>
+      <Route path="/cart" element={<AddtoCart/>}/>
+      <Route path="/buy/:id" element={<Buy/>}/>
       <Route path="/admin" element={<Dashboard/>}/>
       <Route path="/showlist" element={<ShowList/>}/>
      </Routes>
