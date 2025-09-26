@@ -27,8 +27,8 @@ export default function Home({search}){
     return(
         <>
         <Navebar  searchfn={searchTerm}/>
-         {showdata.length == 0 ? <div className='bg-gray-500 rounded p-2 w-40 m-auto mt-40 mb-20 flex justify-center items-center'><span className="h-10 w-10 border-4 border-t-blue-500  rounded-full animate-spin"> </span>Loading...</div> : null }
-       <div className=" md:mx-10  mt-[100px]">
+         {showdata.length == 0 ? <div className=' bg-gray-500 rounded p-2 w-40 m-auto mt-40 mb-20 flex justify-center items-center'><span className="h-10 w-10 border-4 border-t-blue-500  rounded-full animate-spin"> </span>Loading...</div> : null }
+       <div className="min-h-[35vh] md:mx-10  mt-[100px]">
        <div className="flex items-center justify-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xm:flex flex-col items-center justify-center ">
        
             {   
